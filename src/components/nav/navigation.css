@@ -1,0 +1,28 @@
+.navContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+}
+.controlsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    margin-top: 0.2em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 1.5em;
+    width: 4em;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 250ms;
+}
+.link:hover{
+    transform:scale(1.05);
+    border: 2px solid #a0d802;
+    color:#a0d802;
+}
