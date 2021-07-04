@@ -1,0 +1,10 @@
+.projectContainer{
+    height: 100vh;
+    padding-top: 3.2em;
+}
+.justifyStart{
+    justify-self: flex-start;
+}
+.justifyEnd{
+    justify-self: flex-end;
+}

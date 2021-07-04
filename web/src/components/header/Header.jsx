@@ -23,8 +23,15 @@ const useStyles = makeStyles(theme =>({
         boxShadow: 'none',
         backgroundColor: 'white',
     },
+    paper:{
+      borderRadius: 5,
+      backgroundColor: 'lightgrey'
+    },
+    contactLink:{
+      color:'white',
+    }
 })); 
-const Header = () => {
+const Header = ({handleNavPortfolio, handleNavABout}) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
@@ -37,70 +44,80 @@ const Header = () => {
     }
    
     return(
-        <AppBar className={classes.bar} position='static'>
-        <Toolbar className={classes.bar}>
-          <Button >Portfolio</Button>
-          <Button >About</Button>
-          <Button
-            ref={anchorRef}
-            onClick={()=>setOpen(prev=>!prev)}
-            >
-            Contact
-          </Button>
+        <AppBar className={classes.bar} position='fixed'>
+          <Toolbar className={classes.bar}>
+            <Button onClick={()=>handleNavPortfolio()}>Portfolio</Button>
+            <Button onClick={()=>handleNavABout()}>About</Button>
+            <Button
+              ref={anchorRef}
+              onMouseEnter={()=>setOpen(prev=>!prev)}
+              onMouseLeave={()=>setOpen(prev=>!prev)}
+              >
+              Contact
+            </Button>
 
-          <Popper open={open} 
-            anchorEl={anchorRef.current} 
-            role={undefined} 
-            transition 
-            disablePortal>
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
-            >
-              <Paper 
-                variant='outlined'>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList  id="menu-list-grow">
-                    <MenuItem>
-                      <Link
-                        style={{color:'black'}}
-                        href='https://github.com/jakethrasher' 
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        Github
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link 
-                        style={{color:'black'}}
-                        href='https://www.linkedin.com/in/m-jake-thrasher/' 
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        LinkedIn
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link
-                        style={{color:'black'}} 
-                        href='https://drive.google.com/file/d/1LPSoKr3mijhAsUBwQwNa7x-MP3r4a7Hy/view' 
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        Resume
-                      </Link>
-                    </MenuItem>
-                    
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-        </Toolbar>
-      </AppBar>
+            <Popper 
+              onMouseEnter={()=>setOpen(prev=>!prev)}
+              onMouseLeave={()=>setOpen(prev=>!prev)}
+              open={open} 
+              anchorEl={anchorRef.current} 
+              role={undefined} 
+              transition 
+              disablePortal>
+              {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+              >
+                <Paper 
+                  elevation={0}
+                  className={classes.paper}>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList  id="menu-list-grow">
+                      <MenuItem>
+                        <Link
+                          className={classes.contactLink}
+                          href='https://github.com/jakethrasher' 
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          Github
+                        </Link>
+                      </MenuItem>
+                      <MenuItem>
+                        <Link 
+                          className={classes.contactLink}
+                          href='https://www.linkedin.com/in/m-jake-thrasher/' 
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          LinkedIn
+                        </Link>
+                      </MenuItem>
+                      <MenuItem>
+                        <Link
+                          className={classes.contactLink} 
+                          href='https://drive.google.com/file/d/1LPSoKr3mijhAsUBwQwNa7x-MP3r4a7Hy/view' 
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          Resume
+                        </Link>
+                      </MenuItem>
+                      <MenuItem>
+                      <a 
+                        className={classes.contactLink} 
+                        href="mailto:mjakethrasher@gmail.com?subject=Hi Jake!">Email Me!</a>
+                      </MenuItem>
+                      
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+              )}
+            </Popper>
+          </Toolbar>
+        </AppBar>
     )
 };
 export default Header;

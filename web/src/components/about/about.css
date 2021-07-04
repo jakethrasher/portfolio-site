@@ -1,12 +1,12 @@
 .aboutMeContainer{
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
+  height: 100vh;
 }
 .circle{
-  background-image: url('../../myself.jpg');
+  background-image: url('https://images-na.ssl-images-amazon.com/images/I/81JV30TOZZL._AC_SL1500_.jpg');
   background-size: cover;
   grid-column: 3;
   height: 18em;
