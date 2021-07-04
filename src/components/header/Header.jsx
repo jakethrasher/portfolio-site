@@ -81,7 +81,7 @@ const Header = ({handleNavPortfolio, handleNavABout}) => {
                           target="_blank"
                           rel="noopener"
                         >
-                          Github
+                          GitHub
                         </Link>
                       </MenuItem>
                       <MenuItem>
