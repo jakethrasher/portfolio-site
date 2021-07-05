@@ -7,7 +7,7 @@ import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 500,
   },
 });
 const ProjectItem = ({project, index}) => {
@@ -20,7 +20,7 @@ const ProjectItem = ({project, index}) => {
             <CardMedia
               component="img"
               alt="project"
-              height="200"
+              height="300"
               image={project.image}
               title="Contemplative Reptile"
             />
