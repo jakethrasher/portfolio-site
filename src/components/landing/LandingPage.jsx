@@ -4,6 +4,7 @@ import Header from '../header/Header';
 import Container from '@material-ui/core/Container';
 import './landing.css'
 import Portfolio from '../portfolio/Portfolio';
+import ContactForm from '../form/ContactForm';
 
 export default function LandingPage() {
   const portfolioRef = useRef(null);
@@ -30,6 +31,7 @@ export default function LandingPage() {
         handleNavABout={handleNavABout}/>
       <About ref={aboutRef}/>
       <Portfolio ref={portfolioRef}/>
+      <ContactForm/>
     </Container>
   )
 }

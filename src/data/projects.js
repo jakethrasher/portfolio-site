@@ -10,7 +10,21 @@ const projects = [
         image: './awesomebot.png',
         name:'AwesomeBot',
         github:'https://github.com/team-acl-slackbot',
-        description: 'AwesomeBot is a Slack Application designed to increase the productivity of both students and staff of the Alchemy Code Lab by bringing commonly used tooling into the Slack environment. This minimizes the need to open new tabs, search for data, and time spent looking elsewhere. This app looks to minimize data sharding and the frustrations of having to search multiple locations for the requested information.'
+        description: 'AwesomeBot is a Slack application designed to increase the productivity of both students and staff of the Alchemy Code Lab by bringing commonly used tooling into the Slack environment. This minimizes the need to open new tabs, search for data, and time spent looking elsewhere. This app looks to minimize data sharding and the frustrations of having to search multiple locations for the requested information.'
+    },
+    {
+        image: './clearskies.png',
+        name:'Clear Skies',
+        github:'https://github.com/clear-skies-app',
+        site:'https://clear-skies.netlify.app/',
+        description: 'Clear Skies is an app created to assist budding astronomers in planning their own star-gazing adventure. The app features a virtual sky map that helps the user locate celestial objects that can be viewed from their location. The user may create an account and log the details of their journey. '
+    },
+    {
+        image: './nutrizone.png',
+        name:'Nutrizone',
+        github:'https://github.com/Dominique-Sakrisson/nutri-project',
+        site:'https://dominique-sakrisson.github.io/nutri-project/',
+        description: 'Built remotely during a five day sprint, Nutrizone helps users track their daily caloric intake based on their preferred diet type.It was a blast and a challenge coding this app entirely in vanilla JavaScript. We provide tabular data and bar charts built with CanvasJs to help the user meet their daily macronutrient goals.'
     }
 ]
 export default projects;
