@@ -3,6 +3,7 @@ import './form.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/'
+import { sendContact } from '../../services/sendContact';
 
 const useStyles = makeStyles(theme=>({
   root: {
@@ -28,8 +29,9 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit= (e) =>{
+  const handleSubmit= async(e) =>{
     e.preventDefault();
+    await sendContact(email, subject, message);
     console.log(email, subject, message)
   }
 
