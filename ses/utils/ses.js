@@ -1,6 +1,6 @@
 const SES = require('aws-sdk/clients/ses');
 
-const sendEmail = (recipientEmail, message) => {
+const sendEmail = (email, subject, message) => {
   const params = {
     Destination: { 
     ToAddresses: [
@@ -11,12 +11,12 @@ const sendEmail = (recipientEmail, message) => {
     Body: { 
       Html: {
         Charset: "UTF-8",
-       Data: message,
+       Data: `${message} from ${email}`,
       },
     },
     Subject: {
       Charset: 'UTF-8',
-      Data: 'hello there'
+      Data: subject,
     }
   },
   Source: process.env.SOURCE_EMAIL,
