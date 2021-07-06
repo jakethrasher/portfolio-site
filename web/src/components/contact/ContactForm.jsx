@@ -3,7 +3,7 @@ import './form.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/'
-import { sendContact } from '../../utils/sendContact';
+import { sendContact } from '../../services/sendContact';
 
 const useStyles = makeStyles(theme=>({
   root: {
