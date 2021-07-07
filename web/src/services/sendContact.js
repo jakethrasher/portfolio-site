@@ -1,5 +1,5 @@
 export const sendContact = async (email, subject, message) =>{
-    await fetch('https://portfolio-ses.herokuapp.com/email',{
+    await fetch('https://portfolio-ses.herokuapp.com/',{
         method: 'POST',
         headers:{
             'Content-Type':'application/json' 
