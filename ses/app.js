@@ -10,7 +10,7 @@ app.use(cors({
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 
-app.post('/email', async(req, res)=>{
+app.post('/', async(req, res)=>{
     const {email, subject, message} = req.body
     console.log(req.body)
     try {
