@@ -1,5 +1,6 @@
+const URL = 'https://git.heroku.com/portfolio-ses.git'
 export const sendContact = async (email, subject, message) =>{
-    await fetch('http://localhost:8000/email',{
+    await fetch(`${URL}/email`,{
         method: 'POST',
         headers:{
             'Content-Type':'application/json' 
