@@ -1,16 +1,34 @@
 import React, { forwardRef } from 'react';
 import './about.css';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core';
 
 const About = forwardRef((props, ref) => {
+  
     return (
-      <section ref={ref} className='aboutMeContainer' id='about'>
-        <div className='circle'>
-        </div>
-        <div className='blurb'>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia provident vitae, unde possimus consequatur reprehenderit necessitatibus dicta in nesciunt consectetur beatae soluta, odit, minima ullam debitis officiis. Esse, ea?
-          </p>
-        </div>  
-      </section>
+      <div 
+        ref={ref} 
+        className='aboutMeContainer' >
+          <Grid container justify='center'>
+            <Grid item xs={12} sm={6}>
+              <div className='outerCircle'>
+                <img src='../../myself.png' className='circle' alt='me'/>
+
+              </div>
+
+              
+            </Grid>
+            <Grid item item xs={12} sm={6} >
+            <div className='blurbContainer'>
+            <h1 className='name'>JAKE<br></br>THRASHER</h1>
+            <p className='blurb'>
+              I'm a full-stack engineer who strives to create apps that are modern and inspired. 
+            </p>
+          </div>  
+            </Grid>
+          </Grid>
+        
+      </div>
     )
 })
           

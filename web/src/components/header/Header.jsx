@@ -21,14 +21,15 @@ const useStyles = makeStyles(theme =>({
             justifyContent: 'center',
           },
         boxShadow: 'none',
-        backgroundColor: 'white',
+        backgroundColor: '#d4d3c9',
+        color:'#555',
     },
     paper:{
       borderRadius: 5,
-      backgroundColor: 'lightgrey'
+      backgroundColor: '#d4d3c9',
     },
     contactLink:{
-      color:'white',
+      color:'#555',
     }
 })); 
 const Header = ({handleNavPortfolio, handleNavABout}) => {
@@ -104,10 +105,8 @@ const Header = ({handleNavPortfolio, handleNavABout}) => {
                           Resume
                         </Link>
                       </MenuItem>
-                      <MenuItem>
-                      <a 
-                        className={classes.contactLink} 
-                        href="mailto:mjakethrasher@gmail.com?subject=Hi Jake!">Email Me!</a>
+                      <MenuItem className={classes.contactLink}>
+                        Email
                       </MenuItem>
                       
                     </MenuList>

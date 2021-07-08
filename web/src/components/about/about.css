@@ -1,20 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@font-face {
+  font-family: New Montreal;
+  src: url('../../NeueMontrealBold.otf') format("opentype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .aboutMeContainer{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 90%;
+  margin: auto;
+}
+.name{
+  font-size: 3.8em;
+  text-align: left;
+  color:#323232;
+  /* color:rgb(117, 155, 227); */
+  font-family:Arial, Helvetica, sans-serif;
+  font-family: New Montreal;
+}
+.outerCircle{
+  /* background-color: #94ac6e; */
+  /* background-color: #94ac6e97; */
+  background-color: #ceb73470;
+  /* background-color: rgba(182, 152, 157, 0.584); */
+  height: auto;
+  width: 66%;
+  border-radius:23% 83% 70% 30% / 23% 67% 12% 77% ; 
 }
 .circle{
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/81JV30TOZZL._AC_SL1500_.jpg');
+  /* background-position-y: -2.9em; */
   background-size: cover;
-  grid-column: 3;
-  height: 18em;
-  width: 18em;
-  border-radius: 50%;
+  height: auto;
+  width: 100%;
+  margin-left: 2em;
+  border-radius: 23% 83% 70% 30% / 23% 67% 33% 27%  ;
+}
+.blurbContainer{
+  font-size: 1.3em;
 }
 .blurb{
   text-align: left;
-  font-size: 1.3em;
-  width: 70%;
+  /* font-family: New Montreal; */
+  font-family:'Roboto';
+  font-weight: 500;
+  color:#555;
+
 }
