@@ -33,7 +33,7 @@ const ProjectItem = ({project, index}) => {
                 />
               </Card>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={6} alignContent='space-around'>
               
                 <p className={classes.description}>{project.description}</p>  
              
