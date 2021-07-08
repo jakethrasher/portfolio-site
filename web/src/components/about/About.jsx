@@ -18,7 +18,7 @@ const About = forwardRef((props, ref) => {
 
               
             </Grid>
-            <Grid item item xs={12} sm={6} >
+            <Grid item xs={12} sm={6} >
             <div className='blurbContainer'>
             <h1 className='name'>JAKE<br></br>THRASHER</h1>
             <p className='blurb'>
