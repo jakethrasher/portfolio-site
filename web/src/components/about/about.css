@@ -16,27 +16,28 @@
 .name{
   font-size: 6vw;
   text-align: left;
-  color:#323232;
+  color:#323232d0;
   /* color:rgb(117, 155, 227); */
   font-family:Arial, Helvetica, sans-serif;
-  font-family: New Montreal;
+  /* font-family: New Montreal; */
 }
 .outerCircle{
-  background-color: #94ac6eb6;
+  /* background-color: #94ac6eb6; */
+  background-color: #5a6842b6;
   /* background-color: #d0c377aa; */
   /* background-color: rgba(124, 126, 123, 0.475); */
   /* background-color: rgba(182, 152, 157, 0.584); */
   height: auto;
-  width: 60%;
-  border-radius:23% 83% 30% 30% / 23% 67% 43% 57% ; 
+  width: 55%;
+  border-radius:39% 61% 27% 73% / 59% 37% 63% 41% ; 
 }
 .circle{
   /* background-position-y: -2.9em; */
   background-size: cover;
   height: auto;
-  width: 100%;
-  margin-left: 1em;
-  border-radius: 23% 83% 70% 30% / 23% 67% 13% 67%  ;
+  width: 95%;
+  /* margin-left: 1em; */
+  border-radius: 39% 61% 78% 22% / 59% 37% 63% 41%  ;
 }
 .blurbContainer{
   font-size: 1.3em;

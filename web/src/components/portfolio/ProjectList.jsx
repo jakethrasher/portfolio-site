@@ -1,15 +1,15 @@
 import React from 'react';
 import projects from '../../data/projects';
-import List from '@material-ui/core/List';
 import './portfolio.css'
 import ProjectItem from './ProjectItem';
+import Grid from '@material-ui/core/Grid';
 
 const ProjectList = () =>(
-  <List>
+  <Grid container justify='center'>
        {projects.map((proj, index)=>
         <ProjectItem project={proj} index={index} key={proj.name}/>
       )}
-  </List>
+  </Grid>
 ) 
 
 export default ProjectList;
