@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 import './about.css';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core';
 
 const About = forwardRef((props, ref) => {
   

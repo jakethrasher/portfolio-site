@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './form.css';
+import './contact.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/'
@@ -37,6 +37,8 @@ const ContactForm = () => {
 
     return(
       <div className='contactContainer'>
+        <h1 className='contactTitle'>Contact</h1>
+        <div className='formContainer'>
         <form 
           onSubmit={handleSubmit}
           className={classes.root}
@@ -69,6 +71,7 @@ const ContactForm = () => {
             Submit
           </Button>
         </form>
+      </div>
       </div>
     )
 };

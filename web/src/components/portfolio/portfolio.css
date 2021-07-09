@@ -1,9 +1,10 @@
 .projectContainer{
     padding-top: 3.2em;
 }
-.justifyStart{
-    justify-self: flex-start;
-}
-.justifyEnd{
-    justify-self: flex-end;
+.projectsTitle{
+  font-size: 3vw;
+  text-align: left;
+  color:#323232d0;
+  /* color:rgb(117, 155, 227); */
+  font-family:Arial, Helvetica, sans-serif;
 }
