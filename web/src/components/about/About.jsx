@@ -8,14 +8,11 @@ const About = forwardRef((props, ref) => {
       <div 
         ref={ref} 
         className='aboutMeContainer' >
-          <Grid container justify='center'>
-            <Grid item xs={12} sm={6}>
-              <div className='outerCircle'>
-                <img src='../../myself.png' className='circle' alt='me'/>
-
-              </div>
-
-              
+          <Grid container>
+            <Grid item xs={12} sm={6} className='imageFlex'>
+              <div className='background'>
+                <img src='../../myself.png' className='me' alt='me'/>
+              </div>              
             </Grid>
             <Grid item xs={12} sm={6} >
             <div className='blurbContainer'>

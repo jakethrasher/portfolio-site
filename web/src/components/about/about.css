@@ -20,7 +20,8 @@
   font-family:Arial, Helvetica, sans-serif;
   /* font-family: New Montreal; */
 }
-.outerCircle{
+
+.background{
   /* background-color: #94ac6eb6; */
   background-color: #5a6842b6;
   /* background-color: #d0c377aa; */
@@ -30,7 +31,7 @@
   width: 55%;
   border-radius:39% 61% 27% 73% / 59% 37% 63% 41% ; 
 }
-.circle{
+.me{
   /* background-position-y: -2.9em; */
   background-size: cover;
   height: auto;
@@ -48,4 +49,18 @@
   font-weight: 500;
   color:#555;
 
+}
+@media screen and (max-width: 600px){
+
+  .imageFlex{
+    display: flex;
+    justify-content: center;
+  }
+  .name{
+    text-align: center;
+  }
+  .blurb{
+    text-align: center;
+    font-size: 0.8em;
+  }
 }
