@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, forwardRef} from 'react';
 import './contact.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme=>({
   },
 }));
 
-const ContactForm = () => {
+const ContactForm = forwardRef((props,ref) => {
+  
   const classes = useStyles();
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -32,13 +33,13 @@ const ContactForm = () => {
   const handleSubmit= async(e) =>{
     e.preventDefault();
     await sendContact(email, subject, message);
-    console.log(email, subject, message)
   }
 
     return(
-      <div className='contactContainer'>
+      <div className='contactContainer' ref={ref}>
         <h1 className='contactTitle'>Contact</h1>
         <div className='formContainer'>
+        <p className='contactText'>Please feel free to reach out!</p>
         <form 
           onSubmit={handleSubmit}
           className={classes.root}
@@ -74,6 +75,6 @@ const ContactForm = () => {
       </div>
       </div>
     )
-};
+});
 
 export default ContactForm;

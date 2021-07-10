@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme =>({
       color:'#555',
     }
 })); 
-const Header = ({handleNavPortfolio, handleNavABout}) => {
+const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll}) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
@@ -47,8 +47,8 @@ const Header = ({handleNavPortfolio, handleNavABout}) => {
     return(
         <AppBar className={classes.bar} position='fixed'>
           <Toolbar className={classes.bar}>
-            <Button onClick={()=>handleNavPortfolio()}>Portfolio</Button>
-            <Button onClick={()=>handleNavABout()}>About</Button>
+            <Button onClick={()=>handlePortfolioScroll()}>Projects</Button>
+            <Button onClick={()=>handleAboutScroll()}>About</Button>
             <Button
               ref={anchorRef}
               onMouseEnter={()=>setOpen(prev=>!prev)}
@@ -75,6 +75,12 @@ const Header = ({handleNavPortfolio, handleNavABout}) => {
                   className={classes.paper}>
                   <ClickAwayListener onClickAway={handleClose}>
                     <MenuList  id="menu-list-grow">
+                      <MenuItem className={classes.contactLink}>
+                        <span onClick={handleContactScroll}>
+
+                        Email
+                        </span>
+                      </MenuItem>  
                       <MenuItem>
                         <Link
                           className={classes.contactLink}
@@ -104,11 +110,7 @@ const Header = ({handleNavPortfolio, handleNavABout}) => {
                         >
                           Resume
                         </Link>
-                      </MenuItem>
-                      <MenuItem className={classes.contactLink}>
-                        Email
-                      </MenuItem>
-                      
+                      </MenuItem>                  
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>

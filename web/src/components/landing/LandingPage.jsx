@@ -3,35 +3,43 @@ import About from '../about/About';
 import Header from '../header/Header';
 import Container from '@material-ui/core/Container';
 import './landing.css'
-import Portfolio from '../portfolio/Portfolio';
+import Projects from '../projects/Projects';
 import ContactForm from '../contact/ContactForm';
 
 export default function LandingPage() {
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
+  const contactRef = useRef(null);
   useEffect(() => {
     aboutRef.current.scrollIntoView({
       behavior:'smooth'
     })
   }, [])
-  const handleNavPortfolio = () =>{
+  const handlePortfolioScroll = () =>{
    portfolioRef.current.scrollIntoView({
      behavior:'smooth',
    })  
   }
-  const handleNavABout = () => {
+  const handleAboutScroll = () => {
     aboutRef.current.scrollIntoView({
+      behavior:'smooth'
+    })
+  }
+  const handleContactScroll = () =>{
+    contactRef.current.scrollIntoView({
       behavior:'smooth'
     })
   }
   return (
     <Container>
       <Header 
-        handleNavPortfolio={handleNavPortfolio}
-        handleNavABout={handleNavABout}/>
+        handlePortfolioScroll={handlePortfolioScroll}
+        handleAboutScroll={handleAboutScroll}
+        handleContactScroll={handleContactScroll}
+      />
       <About ref={aboutRef}/>
-      <Portfolio ref={portfolioRef}/>
-      <ContactForm/>
+      <Projects ref={portfolioRef}/>
+      <ContactForm ref={contactRef}/>
     </Container>
   )
 }

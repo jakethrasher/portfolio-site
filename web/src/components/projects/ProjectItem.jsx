@@ -9,14 +9,14 @@ import Link from '@material-ui/core/Link';
 import { GoMarkGithub } from 'react-icons/go';
 import { FiExternalLink } from 'react-icons/fi'
 import { makeStyles } from '@material-ui/core';
-import './portfolio.css';
+import './projects.css';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
     margin: 30,
     backgroundColor:'light-grey',
-
+    display:'inline-block',
     '& .MuiCardActions-root':{
       marginRight: '0.5em'
     }

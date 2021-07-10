@@ -1,6 +1,6 @@
 import React from 'react';
 import projects from '../../data/projects';
-import './portfolio.css'
+import './projects.css'
 import ProjectItem from './ProjectItem';
 import Grid from '@material-ui/core/Grid';
 
