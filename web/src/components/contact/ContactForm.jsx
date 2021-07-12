@@ -37,7 +37,7 @@ const ContactForm = forwardRef((props,ref) => {
 
     return(
       <div className='contactContainer' ref={ref}>
-        <h1 className='contactTitle'>Contact</h1>
+        <h1 className='section'>Contact</h1>
         <div className='formContainer'>
         <p className='contactText'>Please feel free to reach out!</p>
         <form 
