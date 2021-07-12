@@ -2,14 +2,13 @@ import React from 'react';
 import projects from '../../data/projects';
 import './projects.css'
 import ProjectItem from './ProjectItem';
-import Grid from '@material-ui/core/Grid';
 
 const ProjectList = () =>(
-  <Grid container justify='center'>
+  <ul className='ul'>
        {projects.map((proj, index)=>
-        <ProjectItem project={proj} index={index} key={proj.name}/>
+        <ProjectItem project={proj} key={proj.name}/>
       )}
-  </Grid>
+  </ul>
 ) 
 
 export default ProjectList;
