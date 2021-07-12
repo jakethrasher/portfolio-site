@@ -11,14 +11,18 @@ const useStyles = makeStyles(theme=>({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: theme.spacing(2),
-
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
       width: '300px',
+      [theme.breakpoints.down('xs')]: {
+        width: '90vw',
+      },
     },
     '& .MuiButtonBase-root': {
-      margin: theme.spacing(2),
+      margin: theme.spacing(1),
+      [theme.breakpoints.down(350)]: {
+        margin: theme.spacing(0),
+      },
     },
   },
 }));
@@ -37,7 +41,7 @@ const ContactForm = forwardRef((props,ref) => {
 
     return(
       <div className='contactContainer' ref={ref}>
-        <h1 className='section'>Contact</h1>
+        <h1 className='sectionHeader'>Contact</h1>
         <div className='formContainer'>
         <p className='contactText'>Please feel free to reach out!</p>
         <form 
@@ -59,7 +63,7 @@ const ContactForm = forwardRef((props,ref) => {
             />
           <TextField 
             multiline
-            rows='10'
+            rows={8}
             label='message'
             variant='outlined'
             onChange={({target})=>setMessage(target.value)}

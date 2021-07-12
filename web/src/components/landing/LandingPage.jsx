@@ -1,7 +1,6 @@
 import React from 'react';
 import About from '../about/About';
 import Header from '../header/Header';
-import Container from '@material-ui/core/Container';
 import './landing.css'
 import Projects from '../projects/Projects';
 import ContactForm from '../contact/ContactForm';
@@ -18,7 +17,7 @@ export default function LandingPage() {
   } = useScroll();
  
   return (
-    <Container>
+    <main>
       <Header 
         handlePortfolioScroll={handlePortfolioScroll}
         handleAboutScroll={handleAboutScroll}
@@ -27,7 +26,7 @@ export default function LandingPage() {
       <About ref={aboutRef}/>
       <Projects ref={portfolioRef}/>
       <ContactForm ref={contactRef}/>
-    </Container>
+    </main>
   )
 }
 
