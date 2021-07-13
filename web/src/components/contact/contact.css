@@ -1,8 +1,9 @@
 .contactContainer{
-    padding-top: 3.2em;
+    width: 90vw;
+    margin:0 auto;
+    height: 80vh;
 }
 .formContainer{
-   
     display: flex;
     align-items: center;
     flex-direction: column;

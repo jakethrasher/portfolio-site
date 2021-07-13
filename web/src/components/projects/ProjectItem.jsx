@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme=>({
     margin: 30,
     backgroundColor:'light-grey',
     transition:'0.2s linear',
-    '&:hover, &:active':{
+    '&:hover':{
       transform:'scale(1.2)'
     }  
   },

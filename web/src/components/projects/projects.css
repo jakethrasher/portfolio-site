@@ -1,5 +1,7 @@
 .projectContainer{
-  padding-top: 3.2em;
+  padding-top: 4rem;
+  width: 90vw;
+  margin:0 auto;
 }
 .ul{
   list-style: none;
@@ -16,11 +18,14 @@
   justify-content: space-between;
 }
 @media screen and (max-width:600px){
-  ul{   
+  .ul{   
     width: 90vw;
   }
   .listItem{
     width: 90vw;
+  }
+  .projectContainer{
+    padding-top: 3.3em;
   }
  
 }
