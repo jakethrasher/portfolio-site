@@ -23,14 +23,14 @@ const useStyles = makeStyles(theme =>({
           justifyContent: 'center',
         },
       boxShadow: 'none',
-      backgroundColor: '#d4d3c9',
+      backgroundColor: '#e6e5dd',
       '& .MuiButton-root':{
         color: '#555'
       }
   },
   paper:{
     borderRadius: 5,
-    backgroundColor: '#d4d3c9',
+    backgroundColor: '#e6e5dd',
   },
   contactLink:{
     color:'#555',
