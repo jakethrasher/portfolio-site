@@ -59,13 +59,14 @@ const ProjectItem = ({project}) => {
                   <GoMarkGithub 
                     size='1.8em' color='#555'/>
                 </Link>
+                {project.site && 
                 <Link
                   href={project.site}
                   target="_blank"
                   rel="noopener"
                 >
                   <FiExternalLink size='1.8em' color='#555'/>
-                </Link>
+                </Link>}
               </CardActions> 
             </div>
             {project.tech.map((el,i)=>(
