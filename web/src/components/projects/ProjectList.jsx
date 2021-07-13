@@ -4,11 +4,11 @@ import './projects.css'
 import ProjectItem from './ProjectItem';
 
 const ProjectList = () =>(
-  <ul className='ul'>
+  <section className='projectList'>
        {projects.map((proj)=>
         <ProjectItem project={proj} key={proj.name}/>
       )}
-  </ul>
+  </section>
 ) 
 
 export default ProjectList;

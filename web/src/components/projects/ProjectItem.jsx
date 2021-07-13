@@ -19,10 +19,6 @@ const useStyles = makeStyles(theme=>({
     },
     margin: 30,
     backgroundColor:'light-grey',
-    transition:'0.2s linear',
-    '&:hover':{
-      transform:'scale(1.2)'
-    }  
   },
   media: {
     height: 'auto',
@@ -39,52 +35,50 @@ const useStyles = makeStyles(theme=>({
 const ProjectItem = ({project}) => {
   const classes = useStyles(); 
     return (
-      <li className='listItem'>
-        <Card 
-          className={classes.root}
-          elevation={0}  
-        >
-          <CardMedia
-              className={classes.media}
-              component='img'
-              alt='project'
-              image={project.image}
-          />
-          <CardContent>
-            <div className='nameAndLinks'>
-              <Typography variant='h5'>
-                {project.name}
+      <Card 
+        className={classes.root}
+        elevation={0}  
+      >
+        <CardMedia
+            className={classes.media}
+            component='img'
+            alt='project'
+            image={project.image}
+        />
+        <CardContent>
+          <div className='nameAndLinks'>
+            <Typography variant='h5'>
+              {project.name}
+            </Typography>
+            <CardActions>
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <GoMarkGithub 
+                    size='1.8em' color='#555'/>
+                </Link>
+                <Link
+                  href={project.site}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FiExternalLink size='1.8em' color='#555'/>
+                </Link>
+              </CardActions> 
+            </div>
+            {project.tech.map((el,i)=>(
+              <Typography variant='caption' key={i} className='techList'>
+                {i === project.tech.length - 1 ? el : el + '| '}
               </Typography>
-              <CardActions>
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <GoMarkGithub 
-                      size='1.8em' color='#555'/>
-                  </Link>
-                  <Link
-                    href={project.site}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FiExternalLink size='1.8em' color='#555'/>
-                  </Link>
-                </CardActions> 
-              </div>
-              {project.tech.map((el,i)=>(
-                <Typography variant='caption' key={i} className='techList'>
-                  {i === project.tech.length - 1 ? el : el + '| '}
-                </Typography>
-              ))}
-              <Typography variant='body2' className={classes.description}>
-                {project.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        </li>
-    )
-         
-}
+            ))}
+            <Typography variant='body2' className={classes.description}>
+              {project.description}
+            </Typography>
+          </CardContent>
+        </Card>    
+  )       
+};
+      
 export default ProjectItem;
