@@ -10,32 +10,36 @@ import { FiExternalLink } from 'react-icons/fi'
 import { makeStyles } from '@material-ui/core';
 import './projects.css';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme=>({
   root: {
     maxWidth: 500,
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
+      margin:10,
+    },
     margin: 30,
     backgroundColor:'light-grey',
-    display:'inline-block',
-    '& .MuiCardActions-root':{
-      marginRight: '0.5em'
-    },
     transition:'0.2s linear',
     '&:hover, &:active':{
       transform:'scale(1.2)'
-    }
+    }  
   },
   media: {
     height: 'auto',
   },
   description:{
     color: '#555',
+    [theme.breakpoints.down('xs')]: {
+      height: '20vh',
+      overflowY: 'scroll',
+    },
   },
   
-});
+}));
 const ProjectItem = ({project}) => {
   const classes = useStyles(); 
     return (
-      <li>
+      <li className='listItem'>
         <Card 
           className={classes.root}
           elevation={0}  
@@ -45,7 +49,6 @@ const ProjectItem = ({project}) => {
               component='img'
               alt='project'
               image={project.image}
-              title='project'
           />
           <CardContent>
             <div className='nameAndLinks'>
@@ -58,7 +61,8 @@ const ProjectItem = ({project}) => {
                     target="_blank"
                     rel="noopener"
                   >
-                    <GoMarkGithub size='1.8em' color='#555'/>
+                    <GoMarkGithub 
+                      size='1.8em' color='#555'/>
                   </Link>
                   <Link
                     href={project.site}
@@ -69,6 +73,11 @@ const ProjectItem = ({project}) => {
                   </Link>
                 </CardActions> 
               </div>
+              {project.tech.map((el,i)=>(
+                <Typography variant='caption' key={i} className='techList'>
+                  {i === project.tech.length - 1 ? el : el + '| '}
+                </Typography>
+              ))}
               <Typography variant='body2' className={classes.description}>
                 {project.description}
               </Typography>

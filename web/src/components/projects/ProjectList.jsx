@@ -5,7 +5,7 @@ import ProjectItem from './ProjectItem';
 
 const ProjectList = () =>(
   <ul className='ul'>
-       {projects.map((proj, index)=>
+       {projects.map((proj)=>
         <ProjectItem project={proj} key={proj.name}/>
       )}
   </ul>

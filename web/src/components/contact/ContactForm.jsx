@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme=>({
     '& .MuiButtonBase-root': {
       margin: theme.spacing(1),
       [theme.breakpoints.down(350)]: {
-        margin: theme.spacing(0),
+        marginTop: theme.spacing(0),
       },
     },
   },
@@ -43,7 +43,7 @@ const ContactForm = forwardRef((props,ref) => {
       <div className='contactContainer' ref={ref}>
         <h1 className='sectionHeader'>Contact</h1>
         <div className='formContainer'>
-        <p className='contactText'>Please feel free to reach out!</p>
+        <p className='reachOutText'>Please feel free to reach out!</p>
         <form 
           onSubmit={handleSubmit}
           className={classes.root}
