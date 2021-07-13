@@ -1,5 +1,8 @@
 import {useRef} from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
+
 export const useScroll=()=>{
+  smoothscroll.polyfill();
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
