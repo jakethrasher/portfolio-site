@@ -1,5 +1,4 @@
 [build]
-
-base="web/"
-publish="public/"
+base = "web/"
+publish = "./dist"
 command = "npm run build"
