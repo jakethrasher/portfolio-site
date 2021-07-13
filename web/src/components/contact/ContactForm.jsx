@@ -33,9 +33,11 @@ const ContactForm = forwardRef((props,ref) => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-
   const handleSubmit= async(e) =>{
     e.preventDefault();
+    setEmail('');
+    setSubject('');
+    setMessage('');
     await sendContact(email, subject, message);
   }
 

@@ -23,16 +23,18 @@ const useStyles = makeStyles(theme =>({
           justifyContent: 'center',
         },
       boxShadow: 'none',
-      backgroundColor: '#d4d3c9',
-      color:'#555',
+      backgroundColor: '#e6e5dd',
+      '& .MuiButton-root':{
+        color: '#555'
+      }
   },
   paper:{
     borderRadius: 5,
-    backgroundColor: '#d4d3c9',
+    backgroundColor: '#e6e5dd',
   },
   contactLink:{
     color:'#555',
-  }
+  },
 })); 
 const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll}) => {
   const classes = useStyles();
@@ -53,14 +55,14 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
       <Toolbar className={classes.bar}>
         <Button onClick={()=>handlePortfolioScroll()}>Projects</Button>
         <Button onClick={()=>handleAboutScroll()}>About</Button>
+        <Button onClick={()=>handleContactScroll()}>Contact</Button>
         <Button
           ref={anchorRef}
           onMouseEnter={()=>setOpen(prev=>!prev)}
           onMouseLeave={()=>setOpen(prev=>!prev)}
           >
-          Contact
+          Links
         </Button>
-
         <Popper 
           onMouseEnter={()=>setOpen(prev=>!prev)}
           onMouseLeave={()=>setOpen(prev=>!prev)}
@@ -79,11 +81,6 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
               className={classes.paper}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList  id="menu-list-grow">
-                  <MenuItem className={classes.contactLink}>
-                    <span onClick={handleContactScroll}>
-                    Email
-                    </span>
-                  </MenuItem>  
                   <MenuItem>
                     <Link
                       className={classes.contactLink}
