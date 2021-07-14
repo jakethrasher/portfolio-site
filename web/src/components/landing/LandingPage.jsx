@@ -36,13 +36,13 @@ export default function LandingPage() {
         </div>
         <div className='chevronDiv'>
           <BsArrowDownShort
-            onClick={handleAboutScroll}
+            onClick={handlePortfolioScroll}
             size='4rem' 
             style={{color:'rgba(85, 85, 85, 0.646)'}}/>
         </div>
       </section>
-      <About ref={aboutRef}/>
       <Projects ref={portfolioRef}/>
+      <About ref={aboutRef}/>
       <ContactForm ref={contactRef}/>
     </main>
   )

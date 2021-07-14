@@ -20,8 +20,8 @@
   font-size: clamp(2.4rem,8vw, 5rem);
   /* font-size: 5rem; */
   text-align: left;
-  /* color:rgba(85, 85, 85, 0.892); */
-  color:rgba(85, 85, 85, 0.913);
+  /* color:rgba(85, 85, 85, 0.913); */
+  color:#e1bea9db;
   font-family:Arial, Helvetica, sans-serif;
   margin:0.5rem 0rem 1rem 0rem;
 }

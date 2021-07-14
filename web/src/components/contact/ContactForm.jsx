@@ -35,10 +35,10 @@ const ContactForm = forwardRef((props,ref) => {
   const [message, setMessage] = useState('');
   const handleSubmit= async(e) =>{
     e.preventDefault();
+    await sendContact(email, subject, message);
     setEmail('');
     setSubject('');
     setMessage('');
-    await sendContact(email, subject, message);
   }
 
     return(
