@@ -16,7 +16,8 @@ main{
   font-size: 1.2rem;
   text-transform: uppercase;
   text-align: left;
-  color:#323232d0;
+  /* color:#323232d0; */
+  color:black;
   /* color:rgb(117, 155, 227); */
   font-family:Arial, Helvetica, sans-serif;
 }

@@ -1,24 +1,41 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
 .aboutContainer{
+  display:flex;
+  flex-direction: column;
   padding-top: 4rem;
   width: 90vw;
   height: 100vh;
   margin:0 auto;
 }
-.topFlex{
+.innerContainer{
   display:flex;
   gap: 2rem;
 }
 .myselfImage{
+  align-self: center;
   border-radius: 10px;
   height: auto;
   width: 30%;
 }
-.aboutText{
+.aboutContent p{
+  font-size:1.2rem;
+}
+.technologies{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+.techHeader{
   font-size: 1.2rem;
-  color:rgba(85, 85, 85, 0.892);
+  margin:0;
+}
+.technologies p{
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
 }
 @media screen and (max-width: 600px){
   .topFlex{
     display:block;
   }
-}
+} */
