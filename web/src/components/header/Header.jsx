@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme =>({
       flexGrow: 1,
   },
   bar:{
-      position:'sticky',
       justifyContent:'flex-end',
       [theme.breakpoints.down('xs')]: {
           justifyContent: 'center',
