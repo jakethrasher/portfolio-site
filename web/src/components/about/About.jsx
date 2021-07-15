@@ -8,8 +8,11 @@ const About = forwardRef((props, ref) => {
         <h1 className='sectionHeader'>About</h1>
         <div className='innerContainer'>
           <div className='imageContainer'>
-            <Image className='myselfImage' cloudName='dvo7m7dsq' secure='true' publicId="IMG_1872_aybgxr.png" >
-              <Transformation width="350" crop="scale" />
+            <Image 
+              className='myselfImage' cloudName='dvo7m7dsq' 
+              secure='true' 
+              publicId="IMG_1872_aybgxr.png" >
+              <Transformation width='700' quality='90' crop="scale"/>
             </Image>
           </div>
           <div className='aboutContent'>
