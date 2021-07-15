@@ -1,5 +1,6 @@
 .projectContainer{
-  padding-top: 4rem;
+  position: relative;
+  padding-top: 56px;
   width: 90vw;
   margin:0 auto;
 }

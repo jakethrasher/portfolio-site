@@ -1,41 +1,63 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
 .aboutContainer{
-  display:flex;
+  display: flex;
+  position: relative;
   flex-direction: column;
-  padding-top: 4rem;
+  height: calc(100vh - 54px);
+  padding-top: 54px;
   width: 90vw;
-  height: 100vh;
   margin:0 auto;
 }
 .innerContainer{
   display:flex;
-  gap: 2rem;
+  gap:1.4rem;
 }
 .myselfImage{
-  align-self: center;
+  width: 90vw;
+  max-width: 370px;
   border-radius: 10px;
-  height: auto;
-  width: 30%;
 }
+/* .aboutContent{
+  width: 70vw;
+} */
 .aboutContent p{
-  font-size:1.2rem;
+  font-size:clamp(16px, 1rem,32px);
+  color:#323232d0;
 }
 .technologies{
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-}
-.techHeader{
-  font-size: 1.2rem;
-  margin:0;
+  columns:  3;
+  padding: 4px;
 }
 .technologies p{
+  font-size:clamp(14px, 1.4vw, 28px);
+  margin:0;
+  padding: 0.3rem;
+  color: rgb(64, 123, 233);
   font-family: 'Space Grotesk', sans-serif;
-  margin: 0;
 }
-@media screen and (max-width: 600px){
-  .topFlex{
+.chevronDiv{
+  cursor: pointer;
+  position: absolute;
+  bottom:0;
+  align-self: center;
+}
+
+@media screen and (max-width:768px){
+  .aboutContainer{
+    height: auto;
+  }
+  .innerContainer{
     display:block;
   }
-} */
+  .myselfImage{
+    display: block;
+    margin:0 auto;
+  }
+  .aboutContent{
+    margin:0 auto;
+  }
+  .technologies{
+    columns:2;
+  }
+}

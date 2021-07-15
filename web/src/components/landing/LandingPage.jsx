@@ -25,7 +25,6 @@ export default function LandingPage() {
         handleContactScroll={handleContactScroll}
       />
        <section
-        
         className='landingContainer' >
         <div className='centerContent'>
           <h3 className='greeting'>Hello! I'm</h3>
@@ -36,13 +35,13 @@ export default function LandingPage() {
         </div>
         <div className='chevronDiv'>
           <BsArrowDownShort
-            onClick={handlePortfolioScroll}
+            onClick={handleAboutScroll}
             size='4rem' 
             style={{color:'rgba(85, 85, 85, 0.646)'}}/>
         </div>
       </section>
+      <About handlePortfolioScroll={handlePortfolioScroll} ref={aboutRef}/>
       <Projects ref={portfolioRef}/>
-      <About ref={aboutRef}/>
       <ContactForm ref={contactRef}/>
     </main>
   )

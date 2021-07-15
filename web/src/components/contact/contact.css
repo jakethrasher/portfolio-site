@@ -1,7 +1,9 @@
 .contactContainer{
+    position: relative;
+    padding-top: 3em;
     width: 90vw;
     margin:0 auto;
-    height: 80vh;
+    height: 100vh;
 }
 .formContainer{
     display: flex;

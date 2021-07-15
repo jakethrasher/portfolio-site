@@ -30,12 +30,12 @@
   margin:0;
   font-size: clamp(1rem,4vw,2.5rem);
   /* font-size:2.6rem; */
-  line-height: clamp(1rem,150%, 3.4rem)
+  line-height: clamp(1rem,150%, 3.4rem);
 }
 .chevronDiv{
+  cursor: pointer;
   position: absolute;
   bottom:0;
-  align-self: center;
 }
 
 .iconFlex{
