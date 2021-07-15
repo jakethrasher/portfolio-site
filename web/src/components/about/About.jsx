@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-
+import {Image, Transformation } from 'cloudinary-react';
 import './about.css';
 
 const About = forwardRef((props, ref) => {
@@ -8,7 +8,12 @@ const About = forwardRef((props, ref) => {
         <h1 className='sectionHeader'>About</h1>
         <div className='innerContainer'>
           <div className='imageContainer'>
-            <img src='https://res.cloudinary.com/dvo7m7dsq/image/upload/v1626388801/IMG_1872_aybgxr.png' alt='jake thrasher' className='myselfImage'/>
+            <Image 
+              className='myselfImage' cloudName='dvo7m7dsq' 
+              secure='true' 
+              publicId="IMG_1872_aybgxr.png" >
+              <Transformation width='700' quality='90' crop="scale"/>
+            </Image>
           </div>
           <div className='aboutContent'>
             <p>
