@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import './about.css';
-import { BsArrowDownShort } from 'react-icons/bs'
 
 const About = forwardRef((props, ref) => {
     return (
