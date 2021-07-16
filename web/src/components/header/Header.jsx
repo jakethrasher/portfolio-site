@@ -9,8 +9,9 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Link from '@material-ui/core/Link';
-
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { makeStyles } from '@material-ui/core';
+import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles(theme =>({
   root: {
@@ -24,7 +25,8 @@ const useStyles = makeStyles(theme =>({
       boxShadow: 'none',
       backgroundColor: '#e6e5dd',
       '& .MuiButton-root':{
-        color: '#555'
+        color:'rgba(85, 85, 85, 0.536)',
+        fontWeight:'600',
       }
   },
   paper:{
@@ -35,8 +37,10 @@ const useStyles = makeStyles(theme =>({
     color:'#555',
   },
 })); 
+
 const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll}) => {
   const classes = useStyles();
+  const trigger = useScrollTrigger();
 
   const [open, setOpen] = useState(false);
 
@@ -50,6 +54,11 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
   }
     
   return(
+    <Slide
+      appear={false}
+      direction='down'
+      in={!trigger}
+    >
     <AppBar className={classes.bar} position='fixed'>
       <Toolbar className={classes.bar}>
         <Button onClick={()=>handlePortfolioScroll()}>Projects</Button>
@@ -118,6 +127,7 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
         </Popper>
       </Toolbar>
     </AppBar>
+    </Slide>
   )
 };
 export default Header;
