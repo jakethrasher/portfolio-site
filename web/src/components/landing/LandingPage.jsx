@@ -16,7 +16,6 @@ export default function LandingPage() {
     aboutRef,
     contactRef
   } = useScroll();
- 
   return (
     <main>
       <Header 
