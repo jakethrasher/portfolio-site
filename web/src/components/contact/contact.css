@@ -17,6 +17,15 @@
     color: #555;
     font-family: Arial, Helvetica, sans-serif;
 }
+.hidden{
+    opacity: 0;
+}
+.visible{
+    color:#555;
+    font-weight: 500;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
 @media screen and (max-width: 600px) {
     .reachOutText{
         display: none;

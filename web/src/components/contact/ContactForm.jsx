@@ -10,16 +10,18 @@ const ContactForm = forwardRef((props,ref) => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit= async(e) =>{
     e.preventDefault();
+    setSubmitted(prev=>!prev);
     await sendContact(email, subject, message);
     setEmail('');
     setSubject('');
     setMessage('');
+    
   }
-
-    return(
+  return(
       <div className='contactContainer' ref={ref}>
         <h1 className='sectionHeader'>Contact</h1>
         <div className='formContainer'>
@@ -29,6 +31,7 @@ const ContactForm = forwardRef((props,ref) => {
           className={classes.root}
           >
           <TextField
+            required
             margin='normal'
             label='Email'
             variant='outlined'
@@ -36,12 +39,14 @@ const ContactForm = forwardRef((props,ref) => {
             value={email}  
             />
           <TextField
+            required
             label='subject'
             variant='outlined'
             onChange={({target})=>setSubject(target.value)}
             value={subject}
             />
-          <TextField 
+          <TextField
+            required
             multiline
             rows={8}
             label='message'
@@ -50,12 +55,14 @@ const ContactForm = forwardRef((props,ref) => {
             value={message}
             />
           <Button
+            disabled={submitted}
             type='submit'
             variant='outlined'
             >
             Submit
           </Button>
         </form>
+        <h4 className={submitted ? 'visible':'hidden'}>Thank you! I look forward to hearing from you!</h4>
       </div>
       </div>
     )
