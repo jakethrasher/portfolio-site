@@ -7,33 +7,12 @@ import CardActions from '@material-ui/core/CardActions';
 import Link from '@material-ui/core/Link';
 import { GoMarkGithub } from 'react-icons/go';
 import { FiExternalLink } from 'react-icons/fi'
-import { makeStyles } from '@material-ui/core';
 import './projects.css';
+import { useProjectStyles } from '../../hooks/styles';
 
-const useStyles = makeStyles(theme=>({
-  root: {
-    maxWidth: 500,
-    [theme.breakpoints.down('xs')]: {
-      width: '100%',
-      margin:10,
-    },
-    margin: 30,
-    backgroundColor:'light-grey',
-  },
-  media: {
-    height: 'auto',
-  },
-  description:{
-    color: '#555',
-    [theme.breakpoints.down('xs')]: {
-      height: '20vh',
-      overflowY: 'scroll',
-    },
-  },
-  
-}));
+
 const ProjectItem = ({project}) => {
-  const classes = useStyles(); 
+  const classes = useProjectStyles(); 
     return (
       <Card 
         className={classes.root}
