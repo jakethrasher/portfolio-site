@@ -39,7 +39,7 @@ export default function LandingPage() {
             style={{color:'rgba(85, 85, 85, 0.646)'}}/>
         </div>
       </section>
-      <About handlePortfolioScroll={handlePortfolioScroll} ref={aboutRef}/>
+      <About ref={aboutRef}/>
       <Projects ref={portfolioRef}/>
       <ContactForm ref={contactRef}/>
     </main>

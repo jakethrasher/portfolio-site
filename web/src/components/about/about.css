@@ -4,9 +4,9 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  justify-content: center;
   height: calc(100vh - 54px);
-  padding-top: 54px;
-  width: 90vw;
+  width: 85vw;
   margin:0 auto;
 }
 .innerContainer{
@@ -15,7 +15,7 @@
 }
 .myselfImage{
   width: 80vw;
-  max-width: 350px;
+  max-width: 330px;
   border-radius: 8px;
 }
 
@@ -38,7 +38,6 @@
   padding: 0.3rem;
   letter-spacing: 1px;
   color: rgb(64, 123, 233);
-  font-family: 'Space Grotesk', sans-serif;
 }
 .chevronDiv{
   cursor: pointer;
@@ -47,10 +46,6 @@
   align-self: center;
 }
 @media screen and (min-width:768px) {
-  .innerContainer{
-    margin:0 auto;
-    max-width: 70vw;
-  }
   .aboutContent p{
     font-size: clamp(16px,1.8vw, 18px);
   }
@@ -63,6 +58,7 @@
     height: auto;
   }
   .myselfImage{
+    width: 70vw;
     display: block;
     margin:0 auto;
   }
@@ -78,7 +74,8 @@
 }
 @media screen and (max-width:725px){
   .innerContainer{
-    display:block;
+    display:flex;
+    flex-direction: column-reverse;
   }
 }
 

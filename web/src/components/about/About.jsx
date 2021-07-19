@@ -7,20 +7,12 @@ const About = forwardRef((props, ref) => {
       <section ref={ref} className='aboutContainer'>
         <h1 className='sectionHeader'>About</h1>
         <div className='innerContainer'>
-          <div className='imageContainer'>
-            <Image 
-              className='myselfImage' cloudName='dvo7m7dsq' 
-              secure='true' 
-              publicId="IMG_1872_aybgxr.png" >
-              <Transformation width='700' quality='90' crop="scale"/>
-            </Image>
-          </div>
           <div className='aboutContent'>
             <p>  
-              I spent several years touring and recording as a professional bass player and I've found that my experience in music has really translated into the world of coding.
+              I’m an engineer who’s stoked to wake up and code everyday. Learning new tools and techniques is a big driving force for me and I’m constantly trying to optimize my skills and further my understanding of web development.
             </p>
             <p>  
-              Both music and coding allow you to create something out of nothing, and being able to build things that boost human potential is a driving force for me.
+              I have a background in customer service which has strengthened my ability to build rapport with clients and I’m very at home in a team setting. I also spent several years touring and recording as a professional bassist and I’ve found that my experience in music has complimented my ability to collaborate and see projects through from start to finish. 
             </p>
             <p>  
               These are some of the tools and technologies that I'm currently working with: 
@@ -33,8 +25,17 @@ const About = forwardRef((props, ref) => {
                 <p>&#8227; PostgreSQL</p>
                 <p>&#8227; Jest</p>
                 <p>&#8227; React Testing Libray</p>
+                <p>&#8227; AWS S3/SES</p>
                 <p>&#8227; Socket.io</p>
             </section>
+          </div>
+          <div className='imageContainer'>
+            <Image 
+              className='myselfImage' cloudName='dvo7m7dsq' 
+              secure='true' 
+              publicId="IMG_1872_aybgxr.png" >
+              <Transformation width='700' quality='90' crop="scale"/>
+            </Image>
           </div>
         </div>
       </section>
