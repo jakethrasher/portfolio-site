@@ -15,19 +15,8 @@ const About = forwardRef((props, ref) => {
               I have a background in customer service which has strengthened my ability to build rapport with clients and I’m very at home in a team setting. I also spent several years touring and recording as a professional bassist and I’ve found that my experience in music has complimented my ability to collaborate and see projects through from start to finish. 
             </p>
             <p>  
-              These are some of the tools and technologies that I'm currently working with: 
+              I'm also passionate about self-expression, equality, and community.  
             </p>
-            <section className='technologies'>
-                <p>&#8227; React</p>
-                <p>&#8227; TypeScript</p>
-                <p>&#8227; Node.js</p>
-                <p>&#8227; Express</p>
-                <p>&#8227; PostgreSQL</p>
-                <p>&#8227; Jest</p>
-                <p>&#8227; React Testing Libray</p>
-                <p>&#8227; AWS S3/SES</p>
-                <p>&#8227; Socket.io</p>
-            </section>
           </div>
           <div className='imageContainer'>
             <Image 
