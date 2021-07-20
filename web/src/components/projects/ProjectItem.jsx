@@ -36,7 +36,10 @@ const ProjectItem = ({project}) => {
                   rel="noopener"
                 >
                   <GoMarkGithub 
-                    size='1.8em' color='#555'/>
+                    size='1.8em' 
+                    className='iconLink'
+                  />
+                    
                 </Link>
                 {project.site && 
                 <Link
@@ -44,7 +47,10 @@ const ProjectItem = ({project}) => {
                   target="_blank"
                   rel="noopener"
                 >
-                  <FiExternalLink size='1.8em' color='#555'/>
+                  <FiExternalLink 
+                    size='1.8em' 
+                    className='iconLink'
+                  />
                 </Link>}
               </CardActions> 
             </div>

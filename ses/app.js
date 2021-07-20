@@ -15,7 +15,7 @@ app.post('/', async(req, res)=>{
     console.log(req.body)
     try {
         await EmailService.send(email, subject, message);
-        res.send('hello')
+        res.status(200).send()
     } catch (err) {
         console.error(err);
     }

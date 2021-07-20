@@ -1,7 +1,7 @@
 .projectContainer{
   padding-top: 54px;
   position: relative;
-  width: 90vw;
+  width: 85vw;
   margin:0 auto;
 }
 .projectList{
@@ -18,9 +18,16 @@
   align-items: center;
   justify-content: space-between;
 }
+.iconLink{
+  color:rgb(60, 60, 60);
+}
+.iconLink:hover{
+  color:rgb(118, 118, 118);
+}
+
 @media screen and (max-width:600px){
   .projectContainer{
-    padding-top: 3.3em;
+    width:90vw;
   }
   .projectList{   
     margin:0 auto;
