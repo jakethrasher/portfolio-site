@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
 .aboutContainer{
+  padding-top: 40px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -15,14 +16,14 @@
 }
 .myselfImage{
   width: 80vw;
-  max-width: 330px;
+  max-width: 320px;
   border-radius: 8px;
 }
 
-.aboutContent p{
+.aboutContent > p{
   margin:0;
   line-height: 160%;
-  font-size:clamp(14px, 1.4vw,22px);
+  font-size:clamp(16px, 1.4vw,22px);
   max-width: 50ch;
   color:#323232d0;
   margin-block-end: 0.5rem;
@@ -31,13 +32,14 @@
   columns:  3;
   padding: 4px;
 }
-.technologies p{
+.technologies > p{
   font-size:clamp(12px, 1.4vw, 18px);
   font-weight: 600;
   margin:0;
   padding: 0.3rem;
   letter-spacing: 1px;
   color: rgb(64, 123, 233);
+  height: max-content;
 }
 .chevronDiv{
   cursor: pointer;
@@ -50,7 +52,7 @@
     font-size: clamp(12px,1.8vw, 18px);
   }
   .technologies p{
-    font-size: 14px;
+    font-size: clamp(12px,1.6vw, 16px);
   }
 }
 @media screen and (max-width:768px){
