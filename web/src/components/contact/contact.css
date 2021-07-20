@@ -4,6 +4,7 @@
     width: 90vw;
     margin:0 auto;
     height: calc(100vh - 54px);
+    max-height: 800px;
 }
 
 .formContainer{

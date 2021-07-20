@@ -79,7 +79,7 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
                   <MenuItem>
                     <Link
                       className={classes.contactLink} 
-                      href='https://drive.google.com/file/d/1LPSoKr3mijhAsUBwQwNa7x-MP3r4a7Hy/view' 
+                      href='../../assets/resume.pdf' 
                       target="_blank"
                       rel="noopener"
                     >
