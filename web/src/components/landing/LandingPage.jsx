@@ -29,7 +29,7 @@ export default function LandingPage() {
           <h3 className='greeting'>Hello! I'm</h3>
           <h1 className='name'>Jake<br></br>Thrasher.</h1>
           <h3 className='statement'>
-            I'm a full-stack software engineer in Portland, Oregon. I like to build apps that are modern and inspired. I'm all about tackling complex problems and learning as much as I can along the way.
+            I'm a software engineer in Portland, Oregon. I like to build apps that are modern and inspired. I'm all about tackling complex problems and learning as much as I can along the way.
           </h3>
         </div>
         <div className='chevronDiv'>
