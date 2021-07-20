@@ -47,6 +47,11 @@
   bottom:0;
   align-self: center;
 }
+@media screen and (max-width:865px) {
+  .technologies{
+    columns:2;
+  }
+}
 @media screen and (min-width:768px) {
   .aboutContent p{
     font-size: clamp(12px,1.8vw, 18px);
@@ -68,10 +73,6 @@
     margin:0 auto;
     max-width: 90vw;
 
-  }
-  
-  .technologies{
-    columns:2;
   }
 }
 @media screen and (max-width:725px){
