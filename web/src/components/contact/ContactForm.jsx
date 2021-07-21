@@ -62,7 +62,7 @@ const ContactForm = forwardRef((props,ref) => {
             Submit
           </Button>
         </form>
-        <h4 className={submitted ? 'visible':'hidden'}>Thank you! I look forward to hearing from you!</h4>
+        <h4 className={submitted ? 'visible':'hidden'}>Thank you! I'll get back to you soon.</h4>
       </div>
       </div>
     )
