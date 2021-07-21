@@ -28,8 +28,8 @@ const Header = ({handlePortfolioScroll, handleAboutScroll, handleContactScroll})
    
     <AppBar className={classes.bar} position='fixed'>
       <Toolbar className={classes.bar}>
-        <Button onClick={()=>handlePortfolioScroll()}>Projects</Button>
         <Button onClick={()=>handleAboutScroll()}>About</Button>
+        <Button onClick={()=>handlePortfolioScroll()}>Projects</Button>
         <Button onClick={()=>handleContactScroll()}>Contact</Button>
         <Button
           ref={anchorRef}
